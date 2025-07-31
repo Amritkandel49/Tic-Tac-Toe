@@ -2,6 +2,12 @@
 
 A modern, interactive tic-tac-toe game built with Flask and JavaScript featuring an intelligent AI opponent using the minimax algorithm with alpha-beta pruning.
 
+## Play Tic-Tac-Toe
+
+🎮 **[Play the Game Live!](https://tic-tac-toe-lgrv.onrender.com/)** 🎮
+
+*Click the link above to play the game directly in your browser - no installation required!*
+
 ## Features
 
 - **Smart AI Opponent**: Uses minimax algorithm with alpha-beta pruning for optimal gameplay
