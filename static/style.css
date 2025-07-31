@@ -1,0 +1,87 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #eee;
+  font-size: 2em;
+  line-height: 100px;
+  cursor: pointer;
+  border: 1px solid #aaa;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.cell.winning {
+  background-color: #ffcccc;
+  position: relative;
+}
+
+.cell.winning::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: red;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.cell.winning.diagonal-1::after {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  height: 4px;
+  width: 141px;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center;
+}
+
+.cell.winning.diagonal-2::after {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  height: 4px;
+  width: 141px;
+  background-color: red;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transform-origin: center;
+}
+
+.cell.winning.vertical::after {
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: 0;
+  height: auto;
+  width: 4px;
+  background-color: red;
+  transform: translateX(-50%);
+}
